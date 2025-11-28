@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você, Meu Amor ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ffe6e9;
+            color: #4a0d21;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ff8fa3, #ffcad4);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .photo-card {
+            width: 260px;
+            height: 330px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .photo-card p {
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        /* Contador */
+        #contador {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #b1003a;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ff8fa3;
+            color: white;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Para Você, Meu Amor ❤️</h1>
+        <p>Você é a melhor parte dos meus dias.</p>
+    </header>
+
+    <section class="section">
+        <h2>Nossa História</h2>
+        <p>
+            Uma história escrita com carinho, sorrisos e momentos que guardo no coração.  
+            Cada dia com você é um presente que eu jamais poderia imaginar ter.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Nossas Memórias</h2>
+
+        <div class="photos">
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Foto+1" alt="">
+                <p>Nosso momento especial ✨</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Foto+2" alt="">
+                <p>Seu sorriso que eu amo ❤️</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/300x300.png?text=Foto+3" alt="">
+                <p>Mais uma lembrança linda 📸</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Tempo Juntos</h2>
+        <p>Estamos juntos há:</p>
+        <div id="contador"></div>
+    </section>
+
+    <footer>
+        Feito com ❤️ por alguém que te ama muito.
+    </footer>
+
+
+    <!-- SCRIPT DO CONTADOR -->
+    <script>
+        // Ajuste aqui a data que vocês começaram a namorar:
+        const inicio = new Date('2025-04-12'); // EXEMPLO
+
+        function atualizarContador() {
+            const agora = new Date();
+            const diff = agora - inicio;
+
+            const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((diff / (1000 * 60)) % 60);
+
+            document.getElementById("contador").innerHTML =
+                `${dias} dias, ${horas} horas e ${minutos} minutos 💘`;
+        }
+
+        atualizarContador();
+        setInterval(atualizarContador, 60000);
+    </script>
+
+</body>
+</html>
